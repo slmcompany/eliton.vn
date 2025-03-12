@@ -1,0 +1,118 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const item ={
+    name: "Động cơ Torin Drive",
+    imgSrc: "/images/thiet-bi/dong-co/dong-co-torindrive.png",
+    price: 1000,
+    description: "Động cơ Torin Drive là sản phẩm chất lượng cao đến từ Trung Quốc, được sản xuất bởi tập đoàn Torin Drive - nhà sản xuất hàng đầu về động cơ thang máy và thang cuốn. Với hơn 30 năm kinh nghiệm, Torin Drive cung cấp các giải pháp động cơ đáng tin cậy, hiệu quả và tiết kiệm chi phí cho ngành công nghiệp thang máy.",
+    category: "Động cơ và tủ điện",
+    link: "/thiet-bi/dong-co-torin",
+    catlink: "/thiet-bi/",
+    cattitle: "Thiết bị",
+feature: [
+  {
+    title: "Thiết kế tối ưu",
+    desc: "Động cơ Torin Drive được thiết kế đặc biệt cho thang máy, với cấu trúc nhỏ gọn và hiệu suất cao."
+  },
+  {
+    title: "Vận hành êm ái",
+    desc: "Công nghệ giảm tiếng ồn tiên tiến giúp động cơ hoạt động êm ái, tạo trải nghiệm di chuyển thoải mái cho người sử dụng."
+  },
+  {
+    title: "An toàn đáng tin cậy",
+    desc: "Tích hợp nhiều tính năng an toàn và hệ thống bảo vệ, đảm bảo vận hành ổn định và an toàn."
+  },
+  {
+    title: "Chi phí hợp lý",
+    desc: "Mang lại giá trị tốt với chi phí đầu tư và bảo trì thấp, phù hợp với nhiều dự án khác nhau."
+  },
+  {
+    title: "Đa dạng model",
+    desc: "Có nhiều model với công suất và tải trọng khác nhau, đáp ứng nhu cầu đa dạng của khách hàng."
+  },
+  {
+    title: "Hỗ trợ kỹ thuật tốt",
+    desc: "Đội ngũ kỹ thuật chuyên nghiệp, sẵn sàng hỗ trợ trong quá trình lắp đặt và bảo trì."
+  }
+]
+}
+---
+
+<Layout title="Thiết bị">
+<div class="bg-white">
+    <div class="pb-16 pt-6 sm:pb-24">
+      <nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ol role="list" class="flex items-center space-x-4">
+          <li>
+            <div class="flex items-center">
+              <a href={item.catlink} class="mr-4 text-sm font-medium text-gray-900">{item.cattitle}</a>
+              <svg viewBox="0 0 6 20" aria-hidden="true" class="h-5 w-auto text-gray-300">
+                <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+              </svg>
+            </div>
+          </li>
+        
+  
+          <li class="text-sm">
+            <a href={item.link} aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{item.name}</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+          <div class="lg:col-span-5 lg:col-start-8">
+            <div class="flex justify-between">
+              <h1 class="text-xl font-medium text-gray-900">{item.name}</h1>
+              <!-- <p class="text-xl font-medium text-gray-900">$35</p> -->
+            </div>
+           
+          </div>
+  
+          <!-- Image gallery -->
+          <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+            <h2 class="sr-only">Images</h2>
+  
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+              <img src={item.imgSrc} alt="Back of women&#039;s Basic Tee in black." class="rounded-lg lg:col-span-2 lg:row-span-2">
+             
+            </div>
+          </div>
+  
+          <div class="mt-8 lg:col-span-5">
+        
+  
+            <!-- Product details -->
+            <div class="mt-10">
+              <h2 class="text-sm font-medium text-gray-900">Mô tả sản phẩm</h2>
+  
+              <div class="mt-4 space-y-4 text-sm/6 text-gray-500">
+                <p>{item.description}</p>
+              </div>
+            </div>
+  
+           
+  
+            <!-- Policies -->
+            <div class="mt-8 border-t border-gray-200 pt-8">
+              <h2 class="text-sm font-medium">Đặc điểm nổi bật:</h2>
+  
+              <div class="mt-4">
+                <ol role="list" class="list-decimal space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-500">
+                  {item.feature.map((feature) => (
+                    <li class="pl-2">
+                      <strong>{feature.title}
+                        </strong> <br>
+                        {feature.desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </Layout>

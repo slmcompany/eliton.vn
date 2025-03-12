@@ -1,0 +1,14 @@
+---
+import PanoramaLayout from "../../../layouts/PanoramaLayout.astro";
+import AframePanorama from "../../../components/qr/AframePanorama";
+---
+
+<PanoramaLayout title="Thang 06 - Góc nhìn 360°">
+  <main class="w-full h-screen bg-black">
+    <AframePanorama 
+      client:only="react"
+      imagePath="/images/qr/thang-06.jpg"
+      title="Thang Eli-1" 
+    />
+  </main>
+</PanoramaLayout> 

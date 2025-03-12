@@ -1,0 +1,16 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { SEO } from "astro-seo";
+import Elevator from "../../components/Elevator.tsx";
+---
+
+<SEO
+  title="Chi tiet san pham"
+  description="Đến năm 2030, Solarmax hoàn thành lắp đặt 1 triệu m2 tấm pin năng lượng mặt trời cho mái nhà Việt."
+/>
+
+<Layout title="">
+  <div class="pt-28 bg-white">
+    <Elevator client:load />
+  </div>
+</Layout>

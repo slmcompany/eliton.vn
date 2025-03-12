@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/hero.astro";
+import VideoSolarmax from "../components/video.solarmax.tsx";
+
+import Homepagecombo from "../components/Homepagecombo.astro";
+import Combobocustom from "../components/Combocustom.tsx";
+import Project from "../components/page/home/Project.astro";
+import Slider from "../components/page/home/slider";
+---
+
+<Layout title="Thang máy Eliton">
+  <div class="">
+    <!-- <Hero /> -->
+    <Slider client:load/>
+    <VideoSolarmax client:load />
+
+
+    <Homepagecombo />
+
+
+    <Project />
+   
+  </div>
+</Layout>

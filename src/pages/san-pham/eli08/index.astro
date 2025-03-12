@@ -1,0 +1,126 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import ProductPage from "../../../components/page/product/detailcombo.tsx";
+import CarouselComponent from "../../../components/page/product/carousel.tsx";
+import PCDetailCombo from "../../../components/page/product/pcdetailcombo.tsx";
+
+
+
+const productDetails = {
+  title: "Thang máy - Minions - YG",
+  price: "495000000",
+  mainImg: "/images/combo/eli08/eli08-2.jpg",
+  galleryImages: [
+    {
+      src: "/images/combo/eli08/eli08-3.png",
+    },
+    {
+      src: "/images/combo/eli08/eli08-4.png",
+    },
+    {
+      src: "/images/combo/eli08/eli08-8.jpg",
+    },
+    {
+      src: "/images/thiet-bi/Fuji-TorinDrive.png",
+    },
+  ],
+  info: [
+  
+    {
+      title: "Tải trọng",
+      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/6ce19b65f45d1470fa8d852a023495bc6c61938fbd5c5eb4764d723b5a902e12?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+      options: [
+        { title: "350 kg", price: 0,  
+          
+        }, 
+        { title: "450 kg", price: 0,  default: true
+          
+        },
+        { title: "630 kg", price: 10000000 },
+      ],
+    },
+
+   
+    {
+      title: "Động cơ",
+      icon: "/images/engine-eliton.svg",
+      options: [
+        { title: "Torin", 
+          price: 0, 
+          default: true,
+          img: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/03fa7d7b3d2461d1e032e606c7d520f34b4834281df81af59c68f85733b75843?apiKey=098ebfbb07384cf89eeedb3d40701deb&width=800",
+          desc: "Động cơ",
+         },
+        { title: "Montanari",
+          price: 7500000,
+          img: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/03fa7d7b3d2461d1e032e606c7d520f34b4834281df81af59c68f85733b75843?apiKey=098ebfbb07384cf89eeedb3d40701deb&width=800",
+          desc: "Động cơ"  
+        },
+     
+      
+      ],
+    },
+   
+
+    {
+      title: "Số điểm dừng",
+      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/aec5fc756728cf2478076797ee251460cf16d267ebd7bb05f677a2124906cf15?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+      options: [
+        { title: "2 tầng", price: -105000000 },
+        { title: "3 tầng", price: -70000000 },
+        { title: "4 tầng", price: -35000000 },
+        { title: "5 tầng", price: 0, default: true },
+        { title: "6 tầng", price: 50000000 },
+        { title: "7 tầng", price: 100000000 },
+
+      ],
+    },
+    
+    {
+      title: "Bao che",
+      icon: "/images/baoche-eliton.svg",
+      options: [
+        
+        { title: "Bản hẹp", price: 0, default: true },
+        { title: "Bản rộng 1 tầng", price: 4000000 },
+        { title: "Bản rộng 2 tầng", price: 8000000 },
+        { title: "Bản rộng 3 tầng", price: 12000000 },
+        { title: "Bản rộng 4 tầng", price: 16000000 },
+        { title: "Bản rộng 5 tầng", price: 20000000 },
+        { title: "Bản rộng 6 tầng", price: 24000000 },
+        { title: "Bản rộng 7 tầng", price: 28000000 },
+
+      ],
+    },
+    {
+      title: "Bo đối trọng",
+      icon: "/images/doi-trong-icon.svg",
+      value: "Bo thép",
+    },
+    {
+      title: "Kích thước",
+      value: "1500 × 1500 mm",
+      icon: "/images/dimention2.svg",
+    },
+    {
+      title: "Hố PIT",
+      value: "≥ 700mm",
+      icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/4c7c40d282f31d9d67c88cb7e7f69abdcc6dc2c4db8f2f84f2b18a8ccf663c7d?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+    },
+    {
+      title: "Tủ điện",
+      value: "Fuji - Nice 3000 ",
+      icon: "/images/tu-dien-eliton.svg",
+      
+    },
+  ],
+ 
+  
+};
+---
+
+<Layout title={productDetails.title}>
+  <PCDetailCombo client:load productDetails={productDetails} />
+  <CarouselComponent client:load productDetails={productDetails} />
+  <ProductPage client:load productDetails={productDetails} />
+</Layout>

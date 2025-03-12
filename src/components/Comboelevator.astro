@@ -1,0 +1,143 @@
+---
+const combos = [
+  {
+    id: 1,
+    image: "/images/mau-1-anh-1.jpg",
+    title: "Thang bê tông",
+    desc: "Thang máy linh hoạt với buồng máy nhỏ gọn cho các tòa nhà dân cư trung tầng.",
+    features: [
+      {
+        icon: "/images/imove-icon.svg",
+        title: "Di chuyển tối đa",
+        value: "160 m",
+      },
+      {
+        icon: "/images/iweight-icon.svg",
+        title: "Tải trọng tối đa ",
+        value: "1600 kg/21 Người",
+      },
+      {
+        icon: "/images/ispeed-icon.svg",
+        title: "Vận tốc tối đa",
+        value: "3 m/s",
+      },
+    ],
+  },
+  {
+    id: 2,
+    image: "/images/mau-1-anh-1.jpg",
+    title: "Thang kính",
+    desc: "Thang máy linh hoạt với buồng máy nhỏ gọn cho các tòa nhà dân cư trung tầng.",
+    features: [
+      {
+        icon: "/images/imove-icon.svg",
+        title: "Di chuyển tối đa",
+        value: "160 m",
+      },
+      {
+        icon: "/images/iweight-icon.svg",
+        title: "Tải trọng tối đa ",
+        value: "1600 kg/21 Người",
+      },
+      {
+        icon: "/images/ispeed-icon.svg",
+        title: "Vận tốc tối đa",
+        value: "3 m/s",
+      },
+    ],
+  },
+  {
+    id: 3,
+    image: "/images/mau-1-anh-1.jpg",
+    title: "Thang bê tông - Đức",
+    desc: "Thang máy linh hoạt với buồng máy nhỏ gọn cho các tòa nhà dân cư trung tầng.",
+    features: [
+      {
+        icon: "/images/imove-icon.svg",
+        title: "Di chuyển tối đa",
+        value: "160 m",
+      },
+      {
+        icon: "/images/iweight-icon.svg",
+        title: "Tải trọng tối đa ",
+        value: "1600 kg/21 Người",
+      },
+      {
+        icon: "/images/ispeed-icon.svg",
+        title: "Vận tốc tối đa",
+        value: "3 m/s",
+      },
+    ],
+  },
+  {
+    id: 4,
+    image: "/images/mau-1-anh-1.jpg",
+    title: "Thang kính - Đức",
+    desc: "Thang máy linh hoạt với buồng máy nhỏ gọn cho các tòa nhà dân cư trung tầng.",
+    features: [
+      {
+        icon: "/images/imove-icon.svg",
+        title: "Di chuyển tối đa",
+        value: "160 m",
+      },
+      {
+        icon: "/images/iweight-icon.svg",
+        title: "Tải trọng tối đa ",
+        value: "1600 kg/21 Người",
+      },
+      {
+        icon: "/images/ispeed-icon.svg",
+        title: "Vận tốc tối đa",
+        value: "3 m/s",
+      },
+    ],
+  },
+];
+---
+
+<div class="container mx-auto py-8 px-4">
+  <h1 class="text-3xl font-medium text-left mb-2">Eliton MiniSpace</h1>
+  <p class="text-gray-100 text-sm mb-4 w-4/5">
+    Hoạt động trên nền tảng máy kéo Eliton MiniSpace ghi điểm bằng phòng máy cực
+    kỳ nhỏ gọn mà đơn giản là một phần mở rộng của giếng thang – đồng nghĩa với
+    công tác lắp đặt dễ dàng với chi phí hiệu quả hơn.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {
+      combos.map((combo) => (
+        <div
+          data-key={combo.id}
+          class="bg-amber-100 rounded-md shadow-md overflow-hidden flex flex-col"
+        >
+          <div>
+            <h2 class="text-xl font-bold px-4 py-2">{combo.title}</h2>
+          </div>
+          <div class="px-4 flex gap-6">
+            <div class="w-2/5">
+              <img
+                src={combo.image}
+                alt={combo.title}
+                class="w-full h-36 object-cover mb-4 rounded-md shadow-sm"
+              />
+            </div>
+
+            <div class="w-3/5">
+              <ul class="list-none text-gray-700 grid grid-cols-1 sm:grid-cols-2 gap-0">
+                {combo.features.map((feature) => (
+                  <li class="flex items-start mb-2 md:mb-0 md:mr-4">
+                    <img src={feature.icon} alt="" class="w-6 h-6 mr-2" />
+                    <div>
+                      <p class="text-md text-gray-900">{feature.title}</p>
+                      <p class="text-sm text-gray-700">{feature.value}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>

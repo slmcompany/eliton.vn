@@ -1,0 +1,115 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const item ={
+    name: "Động cơ Đức ZIEHL-ABEGG",
+    imgSrc: "/images/thiet-bi/dong-co/dong-co-ziehl.png",
+    price: 1000,
+    description: "Động cơ ZIEHL-ABEGG là sản phẩm công nghệ cao đến từ Đức, được thiết kế và sản xuất bởi hãng ZIEHL-ABEGG – một trong những nhà cung cấp hàng đầu thế giới trong lĩnh vực động cơ và hệ thống quạt công nghiệp. Với hơn 100 năm kinh nghiệm, ZIEHL-ABEGG nổi bật với các giải pháp tiên tiến, bền bỉ và hiệu quả, đáp ứng nhu cầu vận hành trong các ngành công nghiệp yêu cầu khắt khe.",
+    category: "Động cơ và tủ điện",
+    link: "/thiet-bi/dong-co-duc",
+    catlink: "/thiet-bi/",
+    cattitle: "Thiết bị",
+    feature: [
+
+  {
+    title: "Công nghệ tiên tiến",
+    desc: "Động cơ ZIEHL-ABEGG được trang bị công nghệ hiện đại, tích hợp các cảm biến thông minh và hệ thống điều khiển tối ưu, giúp tiết kiệm năng lượng và nâng cao hiệu suất làm việc."
+  },
+  {
+    title: "Tiết kiệm năng lượng",
+    desc: "Với hiệu suất cao và khả năng vận hành tối ưu, động cơ ZIEHL-ABEGG giúp giảm thiểu mức tiêu thụ năng lượng, góp phần giảm chi phí vận hành và bảo vệ môi trường."
+  },
+  {
+    title: "Độ bền cao",
+    desc: "Sản phẩm được chế tạo từ các vật liệu chất lượng cao, chịu được điều kiện làm việc khắc nghiệt và có tuổi thọ dài. Các động cơ ZIEHL-ABEGG có khả năng hoạt động ổn định trong môi trường nhiệt độ cao, độ ẩm và bụi bẩn."
+  },
+  {
+    title: "Chống ồn và độ rung thấp",
+    desc: "Động cơ được thiết kế để giảm thiểu tiếng ồn và độ rung trong quá trình vận hành, mang lại môi trường làm việc yên tĩnh và an toàn."
+  },
+  {
+    title: "Dễ dàng bảo trì và thay thế",
+    desc: "Với thiết kế thông minh và cấu trúc linh hoạt, động cơ ZIEHL-ABEGG dễ dàng được bảo trì và thay thế, giúp tiết kiệm chi phí bảo dưỡng và thời gian chết của hệ thống."
+  }
+]
+}
+---
+
+<Layout title="Thiết bị">
+<div class="bg-white">
+    <div class="pb-16 pt-6 sm:pb-24">
+      <nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ol role="list" class="flex items-center space-x-4">
+          <li>
+            <div class="flex items-center">
+              <a href={item.catlink} class="mr-4 text-sm font-medium text-gray-900">{item.cattitle}</a>
+              <svg viewBox="0 0 6 20" aria-hidden="true" class="h-5 w-auto text-gray-300">
+                <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+              </svg>
+            </div>
+          </li>
+        
+  
+          <li class="text-sm">
+            <a href={item.link} aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{item.name}</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+          <div class="lg:col-span-5 lg:col-start-8">
+            <div class="flex justify-between">
+              <h1 class="text-xl font-medium text-gray-900">{item.name}</h1>
+              <!-- <p class="text-xl font-medium text-gray-900">$35</p> -->
+            </div>
+           
+          </div>
+  
+          <!-- Image gallery -->
+          <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+            <h2 class="sr-only">Images</h2>
+  
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+              <img src={item.imgSrc} alt="Back of women&#039;s Basic Tee in black." class="rounded-lg lg:col-span-2 lg:row-span-2">
+             
+            </div>
+          </div>
+  
+          <div class="mt-8 lg:col-span-5">
+        
+  
+            <!-- Product details -->
+            <div class="mt-10">
+              <h2 class="text-sm font-medium text-gray-900">Mô tả sản phẩm</h2>
+  
+              <div class="mt-4 space-y-4 text-sm/6 text-gray-500">
+                <p>{item.description}</p>
+              </div>
+            </div>
+  
+           
+  
+            <!-- Policies -->
+            <div class="mt-8 border-t border-gray-200 pt-8">
+              <h2 class="text-sm font-medium">Đặc điểm nổi bật:</h2>
+  
+              <div class="mt-4">
+                <ol role="list" class="list-decimal space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-500">
+                  {item.feature.map((feature) => (
+                    <li class="pl-2">
+                      <strong>{feature.title}
+                        </strong> <br>
+                        {feature.desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </Layout>

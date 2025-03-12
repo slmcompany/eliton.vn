@@ -1,0 +1,114 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const item ={
+    name: "Tủ điện Fuji",
+    imgSrc: "/images/thiet-bi/tu-dien/tu-dien-fuji.png",
+    price: 1000,
+    description: "Tủ điện Fuji là sản phẩm chất lượng cao đến từ Nhật Bản, được thiết kế bởi Tập đoàn Fuji Electric - một trong những nhà sản xuất thiết bị điện hàng đầu thế giới. Với hơn 90 năm kinh nghiệm, Fuji Electric cung cấp các giải pháp tủ điện an toàn, hiệu quả và đáng tin cậy cho nhiều ứng dụng công nghiệp và thương mại.",
+    category: "Động cơ và tủ điện",
+    link: "/thiet-bi/dong-co-duc",
+    catlink: "/thiet-bi/",
+    cattitle: "Thiết bị",
+    feature: [
+      {
+        title: "Thiết kế an toàn",
+        desc: "Tủ điện Fuji được thiết kế với các tính năng an toàn cao cấp, bao gồm hệ thống chống cháy nổ, bảo vệ quá tải và ngắn mạch, đảm bảo an toàn tối đa cho người sử dụng và thiết bị."
+      },
+      {
+        title: "Chất lượng vượt trội",
+        desc: "Sử dụng vật liệu và linh kiện chất lượng cao, tủ điện Fuji có độ bền cao và khả năng hoạt động ổn định trong thời gian dài, phù hợp với môi trường công nghiệp khắc nghiệt."
+      },
+      {
+        title: "Tích hợp công nghệ hiện đại",
+        desc: "Tủ điện được trang bị các thiết bị điều khiển và giám sát thông minh, cho phép quản lý và vận hành hệ thống điện một cách hiệu quả, tiết kiệm năng lượng."
+      },
+      {
+        title: "Tùy biến linh hoạt",
+        desc: "Có thể tùy chỉnh theo yêu cầu cụ thể của khách hàng, từ kích thước, công suất đến các tính năng đặc biệt, đáp ứng đa dạng nhu cầu sử dụng."
+      },
+      {
+        title: "Bảo trì thuận tiện",
+        desc: "Thiết kế module hóa giúp việc bảo trì, sửa chữa và nâng cấp trở nên dễ dàng, giảm thiểu thời gian ngừng hoạt động của hệ thống."
+      }
+    ]
+}
+---
+
+<Layout title="Thiết bị">
+<div class="bg-white">
+    <div class="pb-16 pt-6 sm:pb-24">
+      <nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ol role="list" class="flex items-center space-x-4">
+          <li>
+            <div class="flex items-center">
+              <a href={item.catlink} class="mr-4 text-sm font-medium text-gray-900">{item.cattitle}</a>
+              <svg viewBox="0 0 6 20" aria-hidden="true" class="h-5 w-auto text-gray-300">
+                <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+              </svg>
+            </div>
+          </li>
+        
+  
+          <li class="text-sm">
+            <a href={item.link} aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{item.name}</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+          <div class="lg:col-span-5 lg:col-start-8">
+            <div class="flex justify-between">
+              <h1 class="text-xl font-medium text-gray-900">{item.name}</h1>
+              <!-- <p class="text-xl font-medium text-gray-900">$35</p> -->
+            </div>
+           
+          </div>
+  
+          <!-- Image gallery -->
+          <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+            <h2 class="sr-only">Images</h2>
+  
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+              <img src={item.imgSrc} alt="Back of women&#039;s Basic Tee in black." class="rounded-lg lg:col-span-2 lg:row-span-2">
+             
+            </div>
+          </div>
+  
+          <div class="mt-8 lg:col-span-5">
+        
+  
+            <!-- Product details -->
+            <div class="mt-10">
+              <h2 class="text-sm font-medium text-gray-900">Mô tả sản phẩm</h2>
+  
+              <div class="mt-4 space-y-4 text-sm/6 text-gray-500">
+                <p>{item.description}</p>
+              </div>
+            </div>
+  
+           
+  
+            <!-- Policies -->
+            <div class="mt-8 border-t border-gray-200 pt-8">
+              <h2 class="text-sm font-medium">Đặc điểm nổi bật:</h2>
+  
+              <div class="mt-4">
+                <ol role="list" class="list-decimal space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-500">
+                  {item.feature.map((feature) => (
+                    <li class="pl-2">
+                      <strong>{feature.title}
+                        </strong> <br>
+                        {feature.desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </Layout>

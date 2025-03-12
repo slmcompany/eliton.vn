@@ -1,0 +1,14 @@
+---
+import PanoramaLayout from "../../../layouts/PanoramaLayout.astro";
+import PanoramaViewer from "../../../components/qr/PanoramaViewer";
+---
+
+<PanoramaLayout title="Thang 01 - Góc nhìn 360°">
+  <main class="w-full h-screen bg-black relative overflow-hidden">
+    <PanoramaViewer
+      client:only="react" 
+      imagePath="/images/qr/thang-01.jpg"
+      title="Thang 01"
+    />
+  </main>
+</PanoramaLayout>

@@ -1,0 +1,187 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const projects = [
+  {
+    title: "DA104 - Hà Nội",
+    description:
+      "Dự án lắp đặt hệ thống điện năng lượng mặt trời tại Hà Nội, giúp tiết kiệm chi phí điện năng và bảo vệ môi trường.",
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/2d9423c6e28e10629a09b759bf44f04a4355890274bb26764732c4419f8c8710?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+    details: [
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/4c7c40d282f31d9d67c88cb7e7f69abdcc6dc2c4db8f2f84f2b18a8ccf663c7d?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Hố thang:",
+        value: "600-1200mm",
+      },
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/d414cc67659a3a0a287f2fc66aecd22872709643ae927e8d637c2bbd330ef990?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Số điểm dừng:",
+        value: "03",
+      },
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/6ce19b65f45d1470fa8d852a023495bc6c61938fbd5c5eb4764d723b5a902e12?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Tải trọng:",
+        value: "450kg",
+      },
+    ],
+  },
+  {
+    title: "DA104 - Hà Nội",
+    description:
+      "Dự án lắp đặt hệ thống điện năng lượng mặt trời tại Hà Nội, giúp tiết kiệm chi phí điện năng và bảo vệ môi trường.",
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/2d9423c6e28e10629a09b759bf44f04a4355890274bb26764732c4419f8c8710?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+    details: [
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/4c7c40d282f31d9d67c88cb7e7f69abdcc6dc2c4db8f2f84f2b18a8ccf663c7d?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Hố thang:",
+        value: "600-1200mm",
+      },
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/d414cc67659a3a0a287f2fc66aecd22872709643ae927e8d637c2bbd330ef990?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Số điểm dừng:",
+        value: "03",
+      },
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/6ce19b65f45d1470fa8d852a023495bc6c61938fbd5c5eb4764d723b5a902e12?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Tải trọng:",
+        value: "450kg",
+      },
+    ],
+  },
+  {
+    title: "DA104 - Hà Nội",
+    description:
+      "Dự án lắp đặt hệ thống điện năng lượng mặt trời tại Hà Nội, giúp tiết kiệm chi phí điện năng và bảo vệ môi trường.",
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/2d9423c6e28e10629a09b759bf44f04a4355890274bb26764732c4419f8c8710?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+    details: [
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/4c7c40d282f31d9d67c88cb7e7f69abdcc6dc2c4db8f2f84f2b18a8ccf663c7d?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Hố thang:",
+        value: "600-1200mm",
+      },
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/d414cc67659a3a0a287f2fc66aecd22872709643ae927e8d637c2bbd330ef990?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Số điểm dừng:",
+        value: "03",
+      },
+      {
+        icon: "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/6ce19b65f45d1470fa8d852a023495bc6c61938fbd5c5eb4764d723b5a902e12?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+        label: "Tải trọng:",
+        value: "450kg",
+      },
+    ],
+  },
+  // Add more projects here
+];
+---
+
+<Layout title="Bật để tiết kiệm điện">
+  <div class="flex overflow-hidden flex-col w-full bg-white">
+    <div class="flex flex-col w-full"></div>
+    <div
+      class="flex gap-2 items-center px-4 py-3 w-full text-lg font-semibold leading-loose text-white bg-black"
+    >
+      <div class="self-stretch my-auto">Mở bộ lọc</div>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/a6315f7a5cf07bef4943e88a3fc384a678393010b5f84466b6e037750457d8b0?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+        class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
+      />
+    </div>
+    <div class="flex flex-col px-6 py-8 w-full">
+      <div class="text-3xl font-medium tracking-tight leading-9 text-black">
+        Các dự án Eliton
+        <br />
+        đã thực hiện
+      </div>
+      <div class="mt-4 text-sm leading-5 text-black text-opacity-60">
+        Eliton đã triển khai nhiều dự án thành công, mang lại sự hài lòng cho
+        khách hàng với các giải pháp tiết kiệm điện năng và hiệu quả. Các dự án
+        của chúng tôi bao gồm các hệ thống điện năng lượng mặt trời, hệ thống
+        chiếu sáng thông minh và các giải pháp tự động hóa nhà ở.
+      </div>
+      <div class="flex gap-2 items-center mt-4 w-full">
+        <div
+          class="flex overflow-hidden gap-2.5 items-center self-stretch p-2 my-auto w-7 h-7 bg-black rounded-lg"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/725d23db755538a1b701b0660255c71160375c5fedadae676b10257bea489982?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain w-3 aspect-square"
+          />
+        </div>
+        <div
+          class="flex overflow-hidden gap-2.5 items-center self-stretch p-2 my-auto w-7 h-7 bg-black rounded-lg"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/df6264ae4bd954afcce8bba04b97ba51a942995bd769db09af77ca1df99dfae5?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain w-3 aspect-square"
+          />
+        </div>
+        <div
+          class="flex overflow-hidden gap-2.5 items-center self-stretch p-2 my-auto w-7 h-7 bg-black rounded-lg"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/a7303e9c82ded8fffdf05068822e3da3daab77011cb65d08078b3744f37ffa85?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain w-3 aspect-square"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-col items-center w-full p-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        {projects.map((project) => (
+          <div class="flex overflow-hidden flex-col mt-5 w-full bg-gray-100 rounded-xl">
+            <img
+              loading="lazy"
+              srcset={`${project.imageUrl}&width=100 100w, ${project.imageUrl}&width=200 200w, ${project.imageUrl}&width=400 400w, ${project.imageUrl}&width=800 800w, ${project.imageUrl}&width=1200 1200w, ${project.imageUrl}&width=1600 1600w, ${project.imageUrl}&width=2000 2000w`}
+              class="object-contain w-full aspect-square"
+            />
+            <div class="flex flex-col px-6 pb-6 mt-4 w-full">
+              <div class="flex flex-col w-full">
+                <div class="text-lg font-semibold text-black">
+                  {project.title}
+                </div>
+                <div class="text-sm leading-5 text-black text-opacity-60">
+                  {project.description}
+                </div>
+              </div>
+              <div class="flex flex-col mt-3 w-full text-sm font-medium leading-none text-black">
+                {project.details.map((detail) => (
+                  <div class="flex flex-wrap gap-1.5 content-center items-center p-1.5 mt-1.5 w-full bg-zinc-500 bg-opacity-10">
+                    <div class="flex flex-1 shrink gap-2 items-center self-stretch my-auto basis-0 ">
+                      <img
+                        loading="lazy"
+                        src={detail.icon}
+                        class="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
+                      />
+                      <div class="self-stretch my-auto">{detail.label}</div>
+                    </div>
+                    <div class="self-stretch my-auto">{detail.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div
+        class="flex overflow-hidden gap-2 justify-center items-center self-stretch px-20 py-2 mt-5 w-full text-sm font-semibold text-black bg-white"
+      >
+        <div class="self-stretch my-auto">Xem thêm</div>
+        <img
+          loading="lazy"
+          src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/8ea94ae1d5b22d37f66ec0fa7dc0d0e8ab995177fa117904dd4a7042aa3bf1ba?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+          class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col w-full"></div>
+  </div>
+</Layout>

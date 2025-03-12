@@ -1,0 +1,144 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const blogData = [
+  {
+    title: "Gặp gỡ đối tác chiến lược",
+    date: "2025-01-19",
+    description:
+      "Ngày 19/01/2022, Eliton và Lifter đã có một buổi gặp gỡ, nâng cao quan hệ hợp tác và đã có những bước phát triển mới trong hoạt động kinh doanh nhằm cung cấp những sản phẩm chất lượng nhất tới khách hàng.",
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/9ea7bcec280e5961b42faeab6554fa9ca5a7bc908109bfc1f11638a8f201d439?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+  },
+  {
+    title: "Hướng dẫn chọn thang máy phù hợp",
+    date: "2025-01-12",
+    description:
+      "Ngày 19/01/2022, Eliton và Lifter đã có một buổi gặp gỡ, nâng cao quan hệ hợp tác và đã có những bước phát triển mới trong hoạt động kinh doanh nhằm cung cấp những sản phẩm chất lượng nhất tới khách hàng.",
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/c81b99ef763e739b9d1c01100273abe092142a1e78843430e11e6c27be6ca1e6?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+  },
+  {
+    title: "Kỹ thuật lắp đặt thang máy",
+    date: "2024-12-12",
+    description:
+      "Ngày 19/01/2022, Eliton và Lifter đã có một buổi gặp gỡ, nâng cao quan hệ hợp tác và đã có những bước phát triển mới trong hoạt động kinh doanh nhằm cung cấp những sản phẩm chất lượng nhất tới khách hàng.",
+    imageUrl:
+      "https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/24ebbe9384bc5a2cfab353fb5de2aaf89caa5df2ff505b98cb3fb9415fa59f9c?apiKey=098ebfbb07384cf89eeedb3d40701deb&",
+  },
+];
+---
+
+<Layout title="Bật để tiết kiệm điện">
+  <section class="flex overflow-hidden flex-col w-full bg-white">
+    <div
+      class="flex gap-2 items-center px-4 py-3 w-full text-lg font-semibold leading-loose text-white bg-black"
+    >
+      <button class="self-stretch my-auto" aria-expanded="false"
+        >Mở bộ lọc</button
+      >
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/a6315f7a5cf07bef4943e88a3fc384a678393010b5f84466b6e037750457d8b0?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+        class="object-contain shrink-0 self-stretch my-auto w-6 aspect-square"
+        alt=""
+      />
+    </div>
+    <div class="flex flex-col px-6 py-8 w-full">
+      <h1 class="text-3xl font-medium tracking-tight leading-9 text-black">
+        Cập nhật các thông tin mới nhất từ Eliton
+      </h1>
+      <p class="mt-4 text-sm leading-5 text-black text-opacity-60">
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo.
+      </p>
+      <div class="flex gap-2 items-center mt-4 w-full">
+        <button
+          class="flex overflow-hidden gap-2.5 items-center self-stretch p-2 my-auto w-7 h-7 bg-black rounded-lg"
+          aria-label="Social media link 1"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/725d23db755538a1b701b0660255c71160375c5fedadae676b10257bea489982?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain w-3 aspect-square"
+            alt=""
+          />
+        </button>
+        <button
+          class="flex overflow-hidden gap-2.5 items-center self-stretch p-2 my-auto w-7 h-7 bg-black rounded-lg"
+          aria-label="Social media link 2"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/df6264ae4bd954afcce8bba04b97ba51a942995bd769db09af77ca1df99dfae5?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain w-3 aspect-square"
+            alt=""
+          />
+        </button>
+        <button
+          class="flex overflow-hidden gap-2.5 items-center self-stretch p-2 my-auto w-7 h-7 bg-black rounded-lg"
+          aria-label="Social media link 3"
+        >
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/a7303e9c82ded8fffdf05068822e3da3daab77011cb65d08078b3744f37ffa85?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain w-3 aspect-square"
+            alt=""
+          />
+        </button>
+      </div>
+    </div>
+    <section
+      class="flex flex-col w-full text-sm font-medium text-gray-800 px-6"
+    >
+      <div class="flex flex-col justify-center items-center py-6 w-full">
+        <div class="flex relative flex-col w-full">
+          <h2 class="w-full text-3xl tracking-tight leading-tight text-black">
+            Bài viết
+          </h2>
+          <img
+            loading="lazy"
+            src="https://cdn.builder.io/api/v1/image/assets/098ebfbb07384cf89eeedb3d40701deb/8001a27cc4d7ff862c420ce865f2f07b94224795518fb75ea43cbbb9d733e398?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+            class="object-contain absolute -left-2 z-0 h-5 aspect-[2.3] top-[-19px] w-[46px]"
+            alt=""
+          />
+          <div class="flex z-0 flex-col w-full">
+            <article class="flex flex-col w-full">
+              {
+                blogData.map((post) => (
+                  <div class="flex z-0 flex-col mt-10 w-full">
+                    <article class="flex flex-col w-full">
+                      <img
+                        loading="lazy"
+                        src={post.imageUrl}
+                        class="object-contain w-full rounded-xl aspect-[1.26]"
+                        alt={post.title}
+                      />
+                      <div class="flex flex-col mt-4 w-full">
+                        <time
+                          datetime={post.date}
+                          class="leading-none opacity-70"
+                        >
+                          {new Date(post.date).toLocaleDateString("vi-VN", {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric",
+                          })}
+                        </time>
+                        <h3 class="mt-1 text-lg leading-loose">{post.title}</h3>
+                        <p class="mt-1 leading-5 opacity-70">
+                          {post.description}
+                        </p>
+                      </div>
+                    </article>
+                  </div>
+                ))
+              }
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</Layout>

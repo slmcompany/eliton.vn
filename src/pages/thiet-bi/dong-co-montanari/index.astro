@@ -1,0 +1,113 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const item ={
+    name: "Động cơ Montanari",
+    imgSrc: "/images/thiet-bi/dong-co/dong-co-montanari.png",
+    price: 1000,
+    description: "Động cơ Montanari là dòng sản phẩm mang thương hiệu đến từ Ý, được sản xuất tại Trung Quốc. Nổi tiếng trong lĩnh vực sản xuất động cơ điện và hộp giảm tốc mang đến hiệu suất vượt trội và độ bền cao. Với hơn 60 năm kinh nghiệm, thương hiệu Montanari đã khẳng định được uy tín trên thị trường toàn cầu nhờ vào chất lượng sản phẩm vượt trội và công nghệ tiên tiến. Với sự kết hợp hoàn hảo giữa tính năng ưu việt và khả năng tiết kiệm năng lượng, động cơ Montanari là sự lựa chọn lý tưởng cho các ngành công nghiệp đòi hỏi sự ổn định và hiệu quả lâu dài.",
+    category: "Động cơ và tủ điện",
+    link: "/thiet-bi/dong-co-duc",
+    catlink: "/thiet-bi/",
+    cattitle: "Thiết bị",
+feature: [
+  {
+    title: "Hiệu suất ổn định và tiết kiệm năng lượng",
+    desc: "Động cơ Montanari được thiết kế với mục tiêu tối ưu hóa hiệu suất và giảm thiểu mức tiêu thụ năng lượng. Điều này giúp giảm chi phí vận hành cho doanh nghiệp, đồng thời giảm tác động tiêu cực đến môi trường."
+  },
+  {
+    title: "Chất lượng sản phẩm được kiểm định nghiêm ngặt",
+    desc: "Tuân thủ quy trình kiểm tra chất lượng chặt chẽ và đạt các tiêu chuẩn quốc tế. Các sản phẩm này được kiểm tra kỹ lưỡng về độ bền, hiệu suất và khả năng vận hành trong điều kiện khắc nghiệt."
+  },
+  {
+    title: "Thiết kế linh hoạt và dễ dàng lắp đặt",
+    desc: "Động cơ Montanari có thiết kế nhỏ gọn và dễ dàng tích hợp vào các hệ thống máy móc hiện có. Điều này giúp tiết kiệm không gian và giảm thiểu thời gian lắp đặt trong quá trình triển khai."
+  },
+  {
+    title: "Độ bền cao và khả năng hoạt động trong điều kiện khắc nghiệt",
+    desc: "Được chế tạo từ các vật liệu chất lượng cao, giúp động cơ có độ bền cao và khả năng vận hành ổn định trong môi trường công nghiệp nặng, đặc biệt là các ứng dụng yêu cầu độ bền cao như băng tải, máy móc chế biến và các thiết bị vận chuyển."
+  },
+  {
+    title: "Giá thành hợp lý",
+    desc: "So với các động cơ nhập khẩu từ các quốc gia phát triển, động cơ Montanari sản xuất tại Trung Quốc có mức giá hợp lý hơn, mang lại giải pháp tiết kiệm chi phí cho các doanh nghiệp vừa và nhỏ mà vẫn đảm bảo chất lượng và hiệu suất."
+  }
+]
+}
+---
+
+<Layout title="Thiết bị">
+<div class="bg-white">
+    <div class="pb-16 pt-6 sm:pb-24">
+      <nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ol role="list" class="flex items-center space-x-4">
+          <li>
+            <div class="flex items-center">
+              <a href={item.catlink} class="mr-4 text-sm font-medium text-gray-900">{item.cattitle}</a>
+              <svg viewBox="0 0 6 20" aria-hidden="true" class="h-5 w-auto text-gray-300">
+                <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+              </svg>
+            </div>
+          </li>
+        
+  
+          <li class="text-sm">
+            <a href={item.link} aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{item.name}</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+          <div class="lg:col-span-5 lg:col-start-8">
+            <div class="flex justify-between">
+              <h1 class="text-xl font-medium text-gray-900">{item.name}</h1>
+              <!-- <p class="text-xl font-medium text-gray-900">$35</p> -->
+            </div>
+           
+          </div>
+  
+          <!-- Image gallery -->
+          <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+            <h2 class="sr-only">Images</h2>
+  
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+              <img src={item.imgSrc} alt="Back of women&#039;s Basic Tee in black." class="rounded-lg lg:col-span-2 lg:row-span-2">
+             
+            </div>
+          </div>
+  
+          <div class="mt-8 lg:col-span-5">
+        
+  
+            <!-- Product details -->
+            <div class="mt-10">
+              <h2 class="text-sm font-medium text-gray-900">Mô tả sản phẩm</h2>
+  
+              <div class="mt-4 space-y-4 text-sm/6 text-gray-500">
+                <p>{item.description}</p>
+              </div>
+            </div>
+  
+           
+  
+            <div class="mt-8 border-t border-gray-200 pt-8">
+              <h2 class="text-sm font-medium">Đặc điểm nổi bật:</h2>
+  
+              <div class="mt-4">
+                <ol role="list" class="list-decimal space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-500">
+                  {item.feature.map((feature) => (
+                    <li class="pl-2">
+                      <strong>{feature.title}
+                        </strong> <br>
+                        {feature.desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </Layout>

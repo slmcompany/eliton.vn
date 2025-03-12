@@ -1,0 +1,104 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { SEO } from "astro-seo";
+
+const products = [
+  {
+    category: "Động cơ",
+    items: [
+      {
+        name: "Động cơ Đức ZIEHL-ABEGG",
+        link: "/thiet-bi/dong-co-duc",
+        imgSrc: "/images/thiet-bi/dong-co/dong-co-ziehl.png",
+      },
+      {
+        name: "Động cơ Torin",
+        link: "/thiet-bi/dong-co-torin",
+        imgSrc: "/images/thiet-bi/dong-co/dong-co-torindrive.png",
+      },
+      {
+        name: "Động cơ Montanari",
+        link: "/thiet-bi/dong-co-montanari",
+        imgSrc: "/images/thiet-bi/dong-co/dong-co-montanari.png",
+      },
+     
+      // Add more items here if needed
+    ],
+  },
+  {
+    category: "Tủ điện",
+    items: [
+      {
+        name: "Tủ điện Fuji",
+     link: "/thiet-bi/tu-dien-fuji",
+        imgSrc: "/images/thiet-bi/tu-dien/tu-dien-fuji.png",
+      },
+      {
+        name: "Tủ điện Lisa-20",
+        link: "/thiet-bi/tu-dien-lisa",
+        imgSrc: "/images/thiet-bi/tu-dien/tu-dien-liSA20.png",
+      },
+     
+     
+      // Add more items here if needed
+    ],
+  },
+];
+---
+
+<SEO
+  title="Chi tiet san pham"
+  description="Đến năm 2030, Solarmax hoàn thành lắp đặt 1 triệu m2 tấm pin năng lượng mặt trời cho mái nhà Việt."
+/>
+
+<Layout title="">
+  <div class=" max-w-7xl flex flex-col items-start bg-gray-100 px-6 mx-auto w-full ">
+    <div class="flex flex-col w-full">
+      <div class="flex flex-col py-8 w-full text-xl">
+        <div>
+          Thiết bị Chính hãng
+          <br />
+          Hiệu suất cao và<br class="hidden sm:block md:block lg:hidden xl:hidden"  />
+          Bảo đảm an toàn
+        </div>
+        <div class="mt-4 text-sm leading-5 text-black text-opacity-60">
+          Động cơ và Tủ điện Eliton cung cấp là một trong những sản phẩm chất lượng cao, được thiết kế và sản xuất bởi các nhà máy hàng thế giới. Với công nghệ tiên tiến và quy trình sản xuất nghiêm ngặt, Động cơ và tủ điện đảm bảo hiệu suất hoạt động ổn định, bền bỉ và an toàn. Sản phẩm này không chỉ đáp ứng các tiêu chuẩn quốc tế mà còn được khách hàng trên toàn thế giới tin dùng.
+        </div>
+      </div>
+      {products.map((product) => (
+        <div class="flex flex-col py-2 max-w-full">
+          <div class="">{product.category}</div>
+          <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4  w-full">
+            {product.items.map((item) => (
+              <div class="flex flex-col gap-2 items-center w-full mt-5">
+                <div class="flex overflow-hidden flex-col self-stretch my-auto bg-white rounded-lg">
+                  <div class="justify-center items-center bg-[var(]">
+                    <a href={item.link}>
+                      <img
+                        loading="lazy"
+                        src={item.imgSrc}
+                        class="object-contain aspect-[1] w-full"
+                      />
+                    </a>
+                  </div>
+                  <div class="flex flex-col justify-center p-3 w-full">
+                    <div class="text-xs font-semibold leading-4 text-gray-700 whitespace-nowrap overflow-hidden text-ellipsis">
+                      {item.name}
+                    </div>
+                    <div class="flex flex-col mt-2 w-full">
+                   
+                      {/* <div class="">
+                        <span class="text-black underline">đ</span>
+                        {item.price}
+                      </div> */}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>

@@ -1,0 +1,60 @@
+---
+import Combothangkinh from "../components/Combothangkinh.tsx";
+import Combobetong from "../components/Combothangbetong.tsx";
+
+const sections = [
+  {
+    title: "Khung thang",
+    subtitle: "Bê tông",
+    desc: "Hố thang bê tông là một giải pháp truyền thống và phổ biến trong xây dựng. Nó được xây dựng bằng bê tông cốt thép, tạo thành một không gian kín để chứa cabin thang máy di chuyển lên xuống. Nhược điểm: Chiếm diện tích, Thời gian thi công lâu, Khó thay đổi.",
+    image: "/images/wf2-ho-thang-be-tong.png",
+    type: "betong"
+  },
+  {
+    title: "Khung thang",
+    subtitle: "Kính",
+    desc: "Hố thang thép là một hệ thống khung được tạo nên từ thép tấm 4 ly chấn định hình. Chúng được lắp ghép với nhau để tạo thành một cấu trúc vững chắc, đóng vai trò như một lồng bao quanh thang máy. Ưu điểm: Tiết kiệm diện tích, Thi công nhanh, Tính thẩm mỹ cao, Dễ dàng vận chuyển và lắp đặt.",
+    image: "/images/wf3-ho-thang-kinh.png",
+    type: "kinh"
+  }
+];
+---
+
+<div class="max-w-7xl mx-auto">
+  {sections.map((section) => (
+    <>
+      <div class="bg-black">
+        <div class="flex justify-between font-medium px-4 md:px-8 lg:px-12 md:py-8">
+          <div class="flex z-0 relative flex-col font-medium pt-14 md:pt-0 md:max-w-xl">
+            <h2 class="text-[28px] md:text-4xl lg:text-5xl tracking-tight leading-9 md:leading-tight text-white">
+              {section.title}
+              <br />
+              {section.subtitle}
+            </h2>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8001a27cc4d7ff862c420ce865f2f07b94224795518fb75ea43cbbb9d733e398?apiKey=098ebfbb07384cf89eeedb3d40701deb&"
+              class="object-contain absolute z-0 h-5 aspect-[2.3] top-9 md:top-[-1rem] w-[46px] md:w-[60px]"
+            />
+            <p class="hidden md:block text-white/80 mt-6 text-sm lg:text-base">{section.desc}</p>
+          </div>
+          <div>
+            <img
+              loading="lazy"
+              src={section.image}
+              class="h-[160px] md:h-[240px] lg:h-[320px] aspect-1"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="px-4 py-5 text-sm md:hidden">
+        <p>{section.desc}</p>
+      </div>
+      {section.type === "betong" ? (
+        <Combobetong client:load />
+      ) : (
+        <Combothangkinh client:load />
+      )}
+    </>
+  ))}
+</div>

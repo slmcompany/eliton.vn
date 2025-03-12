@@ -1,0 +1,115 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+
+const item ={
+    name: "Tủ điện Lisa-20",
+    imgSrc: "/images/thiet-bi/tu-dien/tu-dien-liSA20.png",
+
+    price: 1000,
+    description: "Tủ điện Lisa-20 là sản phẩm tủ điện điều khiển thang máy cao cấp, được thiết kế và sản xuất theo tiêu chuẩn Châu Âu. Với thiết kế thông minh và linh hoạt, tủ điện Lisa-20 mang đến giải pháp điều khiển hiệu quả và an toàn cho hệ thống thang máy hiện đại.",
+    category: "Động cơ và tủ điện",
+    link: "/thiet-bi/tu-dien-lisa",
+    catlink: "/thiet-bi/",
+    cattitle: "Thiết bị",
+    feature: [
+      {
+        title: "Hệ thống điều khiển thông minh",
+        desc: "Tích hợp vi xử lý hiện đại, cho phép điều khiển chính xác và mượt mà các chuyển động của thang máy. Hỗ trợ nhiều chế độ vận hành và tính năng an toàn nâng cao."
+      },
+      {
+        title: "Tiết kiệm năng lượng",
+        desc: "Được trang bị công nghệ biến tần tiên tiến, tối ưu hóa việc sử dụng năng lượng, giúp giảm chi phí vận hành và thân thiện với môi trường."
+      },
+      {
+        title: "Độ tin cậy cao",
+        desc: "Sử dụng linh kiện chất lượng cao từ các thương hiệu uy tín, đảm bảo độ bền và ổn định trong thời gian dài. Khả năng chống nhiễu tốt, phù hợp với môi trường công nghiệp."
+      },
+      {
+        title: "Tính năng an toàn đa dạng",
+        desc: "Tích hợp nhiều tính năng bảo vệ như chống quá tải, ngắn mạch, mất pha, và các tính năng an toàn theo tiêu chuẩn thang máy quốc tế."
+      },
+      {
+        title: "Dễ dàng lắp đặt và bảo trì",
+        desc: "Thiết kế module hóa giúp việc lắp đặt, bảo trì và nâng cấp trở nên đơn giản. Hệ thống chẩn đoán lỗi thông minh giúp giảm thời gian sửa chữa."
+      }
+    ]
+}
+---
+
+<Layout title="Thiết bị">
+<div class="bg-white">
+    <div class="pb-16 pt-6 sm:pb-24">
+      <nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <ol role="list" class="flex items-center space-x-4">
+          <li>
+            <div class="flex items-center">
+              <a href={item.catlink} class="mr-4 text-sm font-medium text-gray-900">{item.cattitle}</a>
+              <svg viewBox="0 0 6 20" aria-hidden="true" class="h-5 w-auto text-gray-300">
+                <path d="M4.878 4.34H3.551L.27 16.532h1.327l3.281-12.19z" fill="currentColor" />
+              </svg>
+            </div>
+          </li>
+        
+  
+          <li class="text-sm">
+            <a href={item.link} aria-current="page" class="font-medium text-gray-500 hover:text-gray-600">{item.name}</a>
+          </li>
+        </ol>
+      </nav>
+      <div class="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
+          <div class="lg:col-span-5 lg:col-start-8">
+            <div class="flex justify-between">
+              <h1 class="text-xl font-medium text-gray-900">{item.name}</h1>
+              <!-- <p class="text-xl font-medium text-gray-900">$35</p> -->
+            </div>
+           
+          </div>
+  
+          <!-- Image gallery -->
+          <div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+            <h2 class="sr-only">Images</h2>
+  
+            <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8">
+              <img src={item.imgSrc} alt="Back of women&#039;s Basic Tee in black." class="rounded-lg lg:col-span-2 lg:row-span-2">
+             
+            </div>
+          </div>
+  
+          <div class="mt-8 lg:col-span-5">
+        
+  
+            <!-- Product details -->
+            <div class="mt-10">
+              <h2 class="text-sm font-medium text-gray-900">Mô tả sản phẩm</h2>
+  
+              <div class="mt-4 space-y-4 text-sm/6 text-gray-500">
+                <p>{item.description}</p>
+              </div>
+            </div>
+  
+           
+  
+            <!-- Policies -->
+            <div class="mt-8 border-t border-gray-200 pt-8">
+              <h2 class="text-sm font-medium">Đặc điểm nổi bật:</h2>
+  
+              <div class="mt-4">
+                <ol role="list" class="list-decimal space-y-1 pl-5 text-sm/6 text-gray-500 marker:text-gray-500">
+                  {item.feature.map((feature) => (
+                    <li class="pl-2">
+                      <strong>{feature.title}
+                        </strong> <br>
+                        {feature.desc}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </Layout>

@@ -1,0 +1,14 @@
+<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="path-1-inside-1_456_1592" fill="white">
+<rect x="3.19995" y="3" width="9.6" height="13.2" rx="0.48"/>
+</mask>
+<rect x="3.19995" y="3" width="9.6" height="13.2" rx="0.48" stroke="black" stroke-width="2.4" mask="url(#path-1-inside-1_456_1592)"/>
+<path d="M7.54998 2.70005C7.54998 2.45152 7.75145 2.25005 7.99998 2.25005C8.2485 2.25005 8.44998 2.45152 8.44998 2.70005V3.15005H7.54998V2.70005Z" stroke="black" stroke-width="0.9"/>
+<rect x="0.800049" y="0.600098" width="1.2" height="16.8" rx="0.48" fill="black"/>
+<rect x="14" y="0.600098" width="1.2" height="16.8" rx="0.48" fill="black"/>
+<rect x="3.19995" y="7.80005" width="9.6" height="1.2" fill="black"/>
+<rect x="3.19995" y="5.3999" width="9.6" height="1.2" fill="black"/>
+<rect x="3.19995" y="10.2" width="9.6" height="1.2" fill="black"/>
+<rect x="3.19995" y="12.6001" width="9.6" height="1.2" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.99995 4.2001C7.75142 4.2001 7.54995 3.99863 7.54995 3.7501V1.0501C7.54995 0.801569 7.75142 0.600098 7.99995 0.600098C8.24848 0.600098 8.44995 0.80157 8.44995 1.0501V3.7501C8.44995 3.99863 8.24848 4.2001 7.99995 4.2001Z" fill="black"/>
+</svg>
