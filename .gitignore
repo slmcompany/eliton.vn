@@ -5,7 +5,7 @@
 
 # Astro
 .astro/
-dist/
+# dist/
 .output/
 
 # Testing
