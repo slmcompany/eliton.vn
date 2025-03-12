@@ -5,7 +5,6 @@
 
 # Astro
 .astro/
-# dist/
 .output/
 
 # Testing
@@ -17,7 +16,6 @@
 
 # Production
 /build
-/dist
 
 # Misc
 .DS_Store
